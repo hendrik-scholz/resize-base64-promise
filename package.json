@@ -1,0 +1,24 @@
+{
+  "name": "resize-base64-promise",
+  "version": "1.0.0",
+  "description": "A function that resizes a Base64 image",
+  "files": [
+    "index.js",
+    "README.md"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "resize",
+    "base64",
+    "image",
+    "picture"
+  ],
+  "author": "Hendrik Scholz",
+  "bugs": {
+    "url": "https://github.com/hendrik-scholz/resize-base64-promise/issues"
+  },
+  "license": "MIT"
+}
