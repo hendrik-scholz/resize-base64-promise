@@ -1,6 +1,6 @@
 {
   "name": "resize-base64-promise",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A function that resizes a Base64 image",
   "files": [
     "index.js",
@@ -20,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/hendrik-scholz/resize-base64-promise/issues"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  }
 }
