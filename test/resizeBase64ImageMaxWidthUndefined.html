@@ -11,7 +11,7 @@
 	
 	resizeBase64ForMaxWidthAndMaxHeight(base64Image_320x240, maxWidth, maxHeight)
 		.then(resizedImage => document.getElementById('resizedImage').src = resizedImage)
-		.catch(alert(errorMessage));
+		.catch(errorMessage => alert(errorMessage));
 </script>
 </head>
 <body>
