@@ -29,8 +29,9 @@ npm i --save https://github.com/hendrik-scholz/resize-base64-promise/#master
 
 ## Test
 
-1. Copy the index.js and the test folder with all its files to an HTTP server.
-2. Request the HTML file for the test case in the browser, e.g. http://localhost/resize-base64-promise/test/resizeBase64ImageFrom320x240ToMaxHeight120.html
+1. Run 'npm test' from the directory where the package.json is located.
+2. Open http://localhost:3000/ in your browser.
+3. Click on a link in the list of test cases and check the results of that test case.
 
 ## Example
 
