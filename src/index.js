@@ -105,39 +105,45 @@ function resizeBase64(base64String, maxWidth, maxHeight, ratioFunction) {
 }
 
 function resizeBase64ForMaxWidth(base64String, maxWidth, maxHeight) {
-  const validationResult = validateInput(base64String, maxWidth, maxHeight);
+  const promise = new Promise((resolve, reject) => {
+    const validationResult = validateInput(base64String, maxWidth, maxHeight);
 
-  if (validationResult.isValid === true) {
-    return resizeBase64(base64String, maxWidth, maxHeight, maxWidthRatioFunction);
-  } else {
-    return new Promise((resolve, reject) => {
+    if (validationResult.isValid === true) {
+      resolve();
+    } else {
       reject(validationResult.errorMessage);
-    });
-  }
+    }
+  }).then(() => resizeBase64(base64String, maxWidth, maxHeight, maxWidthRatioFunction));
+
+  return promise;
 }
 
 function resizeBase64ForMaxHeight(base64String, maxWidth, maxHeight) {
-  const validationResult = validateInput(base64String, maxWidth, maxHeight);
+  const promise = new Promise((resolve, reject) => {
+    const validationResult = validateInput(base64String, maxWidth, maxHeight);
 
-  if (validationResult.isValid === true) {
-    return resizeBase64(base64String, maxWidth, maxHeight, maxHeightRatioFunction);
-  } else {
-    return new Promise((resolve, reject) => {
-        reject(validationResult.errorMessage);
-    });
-  }
+    if (validationResult.isValid === true) {
+      resolve();
+    } else {
+      reject(validationResult.errorMessage);
+    }
+  }).then(() => resizeBase64(base64String, maxWidth, maxHeight, maxHeightRatioFunction));
+
+  return promise;
 }
 
 function resizeBase64ForMaxWidthAndMaxHeight(base64String, maxWidth, maxHeight) {
-  const validationResult = validateInput(base64String, maxWidth, maxHeight);
+  const promise = new Promise((resolve, reject) => {
+    const validationResult = validateInput(base64String, maxWidth, maxHeight);
 
-  if (validationResult.isValid === true) {
-    return resizeBase64(base64String, maxWidth, maxHeight, maxWidthMaxHeightRatioFunction);
-  } else {
-    return new Promise((resolve, reject) => {
-        reject(validationResult.errorMessage);
-    });
-  }
+    if (validationResult.isValid === true) {
+      resolve();
+    } else {
+      reject(validationResult.errorMessage);
+    }
+  }).then(() => resizeBase64(base64String, maxWidth, maxHeight, maxWidthMaxHeightRatioFunction));
+
+  return promise;
 }
 
 export { resizeBase64ForMaxWidth };
