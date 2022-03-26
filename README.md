@@ -13,8 +13,8 @@ Every function takes the parameters listed below.
 | Parameter | Description |
 | ------ | ----------- |
 | base64String | the image to resize as a Base64 string |
-| maxWidth | the maxmium width that the image should be resized to |
-| maxHeight | the maxmium height that the image should be resized to |
+| maxWidth | the maximum width that the image should be resized to |
+| maxHeight | the maximum height that the image should be resized to |
 
 ## Restrictions
 
